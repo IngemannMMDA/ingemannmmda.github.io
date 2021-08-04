@@ -1,0 +1,18 @@
+@charset "uft-8";
+/* CSS Document */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Body styling */
+
+main {
+    height: auto;
+}

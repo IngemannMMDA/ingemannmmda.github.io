@@ -1,0 +1,220 @@
+@charset "uft-8";
+/* CSS Document */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Navigation Bar styling start point */
+
+a {
+	color: #fff;
+}
+
+.header {
+	display: block;
+	background-color: #BABABA;
+	position: none;
+	width: 100%;
+	height: auto;
+	z-index: 3;
+}
+
+.header ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	background-color: #BABABA;
+}
+
+.header ul a {
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.header ul a:hover {
+	background-color: #0073B1;
+	color: #fff;
+}
+
+.header .logo img {
+	float: left;
+	display: block;
+	width: auto;
+    height: 62px;
+	margin: 0;
+	padding: 14px 20px;
+}
+
+.header .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height .2s ease-out;
+}
+
+.header .menu .link-active {
+	background-color: #002559;
+	color: #fff;
+}
+
+.header .menu-icon {
+	padding: 30px 20px;
+	position: relative;
+	float: right;
+	cursor: pointer;
+}
+
+.header .menu-icon .nav-icon {
+	background: #fff;
+	display: block;
+	height: 2px;
+	width: 18px;
+	position: relative;
+	transition: background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before {
+	background: #fff;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 5px;
+	transition: all .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:after {
+	background: #fff;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: -5px;
+	transition: all .2s ease-out;
+}
+
+.header .menu-btn {
+	display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+	max-height: 378px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+	background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+	transform: rotate(-45deg);
+	top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+/* Navigation Bar styling endpoint */
+
+/* Footer styling startpoint */
+
+footer {
+	display: block;
+	width: 100%;
+	height: auto;
+	background-color: #BABABA;
+	/*border-top: 1px solid #000;*/
+}
+
+.footer-flex-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding: 10px 25px 30px 25px;
+}
+
+.info {
+	display: block;
+	margin: 10px;
+}
+
+footer .footer-p {
+	font-size: 12px;
+}
+
+footer a {
+	color: #000;
+}
+
+footer img {
+	margin: 10px 10px 0 10px;
+}
+
+img.logo-link-1 {
+	width: auto;
+	height: 20px;
+}
+
+img.logo-link-2 {
+	width: auto;
+	height: 20px;
+}
+
+/* Footer styling endpoint */
+
+/* Media Queries */
+
+@media (min-width: 1115px) {
+	.header {
+		height: 64px;
+		padding: 0 150px;
+	}
+
+	.header li {
+		float: left;
+	}
+
+	.header li a {
+		padding: 20px 20px;
+	}
+
+	.header .menu {
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+
+	.header .menu-icon {
+		display: none;
+	}
+
+    .header .logo img {
+        width: auto;
+        height: 66px;
+    }
+
+	footer {
+		padding: 0 150px;
+	}
+
+	.footer-flex-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 25px;
+	}
+}
